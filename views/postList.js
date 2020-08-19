@@ -15,7 +15,7 @@ module.exports = (posts, users) => html`<!DOCTYPE html>
           <p>
             <span class="news-position">${post.id}. ▲</span>
             <a href="/posts/${post.id}">${post.title}</a>
-            <small>(by ${users})</small>
+            <small>(by ${post.name})</small>
           </p>
           <small class="news-info">
             ${post.upvotes} upvotes | ${timeAgo(post.date)}
