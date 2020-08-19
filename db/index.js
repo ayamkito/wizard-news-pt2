@@ -4,9 +4,9 @@
 const { Client } = require('pg')
 const client = new Client({
     host: 'localhost',
-    database: "wnews",
     port: 5432,
     user: 'postgres',
+    database: "wnews",
     password: 'password',
   })
 
@@ -17,4 +17,4 @@ client.connect(err => {
       console.log('connected')
     }
   })
-  module.export = client;
+  module.exports = client;

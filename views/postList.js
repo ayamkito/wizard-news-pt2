@@ -1,7 +1,7 @@
 const timeAgo = require("node-time-ago");
 const html = require("html-template-tag");
 
-module.exports = posts => html`<!DOCTYPE html>
+module.exports = (posts, users) => html`<!DOCTYPE html>
   <html>
   <head>
     <title>Wizard News</title>
@@ -15,7 +15,7 @@ module.exports = posts => html`<!DOCTYPE html>
           <p>
             <span class="news-position">${post.id}. ▲</span>
             <a href="/posts/${post.id}">${post.title}</a>
-            <small>(by ${post.name})</small>
+            <small>(by ${users})</small>
           </p>
           <small class="news-info">
             ${post.upvotes} upvotes | ${timeAgo(post.date)}
